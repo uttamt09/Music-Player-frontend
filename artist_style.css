@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsla(231, 53%, 10%, 1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+
+
+.section{
+    width: 100%;
+    min-height: 80px;
+    /* border: 2px solid yellow; */
+}
+
+.margin20px{
+    margin-top: 20px;
+}
+
+.FAiconcolor{
+    color: rgb(196, 193, 193);
+}
+
+.WhiteBackgroundColor{
+    background-color: white;
+}
+
+.inheritBackgroundColor{
+    background-color: inherit;
+}
+
+
+.majorHeadline{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.smallFontSize{
+    font-size: 0.9rem;
+}
+
+
+ul>li{
+    list-style: none;
+}
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 130px auto;
+    
+    grid-template-areas: "navBar navBar navBar"
+                        "main_cont main_cont main_cont" ;
+}
+
+
+
+
+
+.navigation{
+    grid-area: navBar;
+    /* border: 2px solid green; */
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar_LeftSide{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.logo{
+    width: 100px;
+    height: 90px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.logoText{
+    font-size: 1.5rem;
+}
+
+
+
+.navBar_RightSide{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+
+.faintColor{
+    background-color: inherit;
+}
+
+.navBar_RightSide div{
+    margin: 20px;
+}
+
+.searchBar{
+    width: 350px;
+    height: 40px;
+    background-color: rgb(27, 36, 90);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.searchtextField input{
+    border: none;
+    outline:none;
+    width: 250px;
+    height: 30px;
+    color: white;
+}
+
+.notificationBell i{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.profileImage{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profileImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+@media only screen and (max-width: 576px){
+    .navigation{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .profileImage{
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main_container{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 30%;
+    grid-template-rows: auto;
+    grid-template-areas: "main_article main_article playListQueue";
+
+    grid-area: main_cont;
+    /* border: 2px solid black; */
+    grid-column-gap: 35px;
+}
+
+
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    grid-area: main_article;
+    /* border: 2px solid blue; */
+}
+
+
+
+.artist_details{
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    background-color: hsla(231, 53%, 17%, 1);
+}
+
+.artistImage{
+    min-width: 300px;
+    min-height: 300px;
+    /* border: 2px solid green; */
+}
+
+.artistImage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.aboutArtist{
+    padding: 20px;
+}
+
+.artistDetailHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.artistAction{
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid yellow; */
+    margin-top: 40px;
+}
+
+.playButtonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.playButton{
+    width: 140px;
+    height: 40px;
+    background-image: linear-gradient(to right, hsla(253, 64%, 43%, 1), hsla(285, 67%, 56%, 1));
+}
+
+.playButton a{
+    background: none;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.songList{
+    width: 100%;
+    min-height: 500px;
+    /* border: 2px solid black; */
+    margin-top: 40px;
+}
+
+
+.listSongDetail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    background-color: hsla(230, 32%, 15%, 1);
+    height: 60px;
+}
+
+.songImageContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 140px;
+}
+
+
+.songImage{
+    width: 40px;
+    height: 40px;
+}
+
+.songImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.singleSongAction{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Aside container */
+
+.aside_container{
+    grid-area: playListQueue;
+    /* border: 2px solid purple; */
+}
+
+
+.songName{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.singleSong{
+    display: flex;
+    /* border: 2px solid cyan; */
+    min-width: 200px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.singleSongImages{
+    width: 80px;
+    height: 80px;
+}
+
+
+.singleSongImages img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.SimilarArtistHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.songNameList{
+    margin-top: 30px;
+}
+
+.songMenuDot{
+    position: relative;
+}
+
+
+.singleSongOptions{
+    /* border: 2px solid cyan; */
+    display: none;
+    position: absolute;
+    right: 10px;
+    width: 170px;
+    min-height: 170px;
+    z-index: 2;
+}
+
+.singleSongOptions ul li{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+
+
+.songMenuDot:hover .singleSongOptions{
+    display: block;
+}
+
+.songMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
